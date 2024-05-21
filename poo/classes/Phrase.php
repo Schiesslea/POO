@@ -86,10 +86,10 @@ class Phrase {
     public function getNombreVoyelles(): int {
         $nbVoyelles = 0;
         $voyelles = ["a","e","i","o","u","y"];
-        $caracteres = str_split($this->phrase);
+        $caracteres = str_split(strtolower($this->phrase));
         foreach ($caracteres as $caractere) {
             foreach ($voyelles as $voyelle) {
-                if ($caractere==$voyelles) {
+                if ($caractere==$voyelle) {
                     $nbVoyelles++;
                 }
             }
